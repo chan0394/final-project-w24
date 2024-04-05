@@ -8,6 +8,7 @@ body {
     font-style: normal;
 
     margin: 0;
+    /* padding: 2em; */
 }
 
 .wrapper {
@@ -24,6 +25,7 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2em;
 }
 
 nav ul {
@@ -53,7 +55,10 @@ nav ul li a:focus {
 }
 
 #shot {
-    padding: 2em;
+    /* padding-top: 1em;
+    padding-bottom: 1em; */
+    padding: 0 2em;
+    gap: 20px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
@@ -76,4 +81,90 @@ nav ul li a:focus {
 
 #shot img:nth-child(4) {
     grid-area: img4;
+}
+
+.container {
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 3em;
+}
+
+h1 {
+    font-size: 2.027rem;
+    font-weight: 500;
+}
+
+h1 + p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#limited + p {
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.container a:link,
+.container a:visited {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 4px;
+
+    margin-top: auto;
+}
+
+.container a:hover,
+.container a:focus {
+    background-color: #fff;
+    color: #414361;
+}
+
+#behind {
+    background-color: #f8fafc;
+    padding: 1em 2em;
+}
+
+.wrapper h2 {
+    font-size: 1.802rem;
+    text-align: center;
+}
+
+#reviews {
+    background-color: #000;
+    color: #fff;
+    padding: 2em;
+}
+
+/* #reviews h2 {
+    font-size: 1.802rem;
+    text-align: center;
+} */
+
+#flavours {
+    padding: 2em;
+}
+
+#flavours > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1em 2em;
+    text-align: center;
 }
