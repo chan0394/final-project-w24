@@ -8,7 +8,6 @@ body {
     font-style: normal;
 
     margin: 0;
-    /* padding: 2em; */
 }
 
 .wrapper {
@@ -54,9 +53,11 @@ nav ul li a:focus {
     text-decoration: none;
 }
 
+#shot img {
+    border-radius: 5px;
+}
+
 #shot {
-    /* padding-top: 1em;
-    padding-bottom: 1em; */
     padding: 0 2em;
     gap: 20px;
     display: grid;
@@ -110,15 +111,18 @@ p {
     font-size: 1.2rem;
 }
 
+/* - how to create button without using inline-block? */
+
 .container a:link,
 .container a:visited {
     display: inline-block;
     padding: .5em 1em;
     background-color: #000;
     color: #fff;
+    font-weight: 600;
     text-decoration: none;
     border: 2px solid #000;
-    border-radius: 4px;
+    border-radius: 5px;
 
     margin-top: auto;
 }
@@ -137,34 +141,101 @@ p {
 .wrapper h2 {
     font-size: 1.802rem;
     text-align: center;
+    font-weight: 800;
+}
+
+blockquote {
+    margin: 0;
 }
 
 #reviews {
     background-color: #000;
     color: #fff;
-    padding: 2em;
+    padding: 1em 2em 3em;
 }
 
-/* #reviews h2 {
-    font-size: 1.802rem;
+#products {
+    padding: 1em 2em 2em;
+}
+
+img + p {
+    font-size: 1.5rem;
     text-align: center;
-} */
+    font-weight: 800;
+}
+
+#flavours img {
+    border-radius: 10px 10px 0 0;
+}
+
+#flavours p {
+    text-align: center;
+}
 
 #flavours {
-    padding: 2em;
-}
-
-#flavours > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-
-
+#flavours div {
+    background-color: #f8fafc;
+    border-radius: 0 0 10px 10px;
+}
 
 footer {
     background-color: #000;
     color: #fff;
     padding: 1em 2em;
     text-align: center;
+}
+
+@media (min-width: 768px){
+    /* body {
+        background-color: lightseagreen;
+    } */
+    #shot {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "img1 img1 img1 img2 img2 img2"
+        "img3 img3 img3 img4 img4 img4"
+        ;
+    }
+    #shot img:nth-child(1) {
+        grid-area: img1;
+    }
+
+    #shot img:nth-child(2) {
+        grid-area: img2;
+    }
+
+    #shot img:nth-child(3) {
+        grid-area: img3;
+    }
+
+    #shot img:nth-child(4) {
+        grid-area: img4;
+    }
+        
+    .paragraph {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .quote {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: start;
+        gap: 40px;
+    }
+
+    #flavours {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
 }
