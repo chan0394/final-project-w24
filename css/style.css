@@ -13,7 +13,6 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 img {
@@ -33,7 +32,7 @@ nav ul {
 
     text-transform: uppercase;
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -94,6 +93,9 @@ nav ul li a:focus {
 h1 {
     font-size: 2.027rem;
     font-weight: 500;
+
+    /* margin-top: 0;
+    margin-bottom: 0; */
 }
 
 h1 + p {
@@ -105,10 +107,6 @@ h1 + p {
 
 #limited + p {
     margin-top: 0;
-}
-
-p {
-    font-size: 1.2rem;
 }
 
 /* - how to create button without using inline-block? */
@@ -158,8 +156,8 @@ blockquote {
     padding: 1em 2em 2em;
 }
 
-img + p {
-    font-size: 1.5rem;
+h3 {
+    font-size: 1.266rem;
     text-align: center;
     font-weight: 800;
 }
@@ -194,11 +192,17 @@ footer {
     /* body {
         background-color: lightseagreen;
     } */
+    
+    /* .wrapper {
+        max-width: 1200px;
+        margin: auto 0;
+    } */
+    
     #shot {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
-        "img1 img1 img1 img2 img2 img2"
-        "img3 img3 img3 img4 img4 img4"
+        "img1 img2"
+        "img3 img4"
         ;
     }
     #shot img:nth-child(1) {
@@ -237,5 +241,64 @@ footer {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+    }
+}
+
+@media (min-width: 960px){
+    /* body {
+        background-color: lightseagreen;
+    } */
+    
+    /* .wrapper {
+        max-width: 1200px;
+        margin: auto 0;
+    } */
+    
+    .grid .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #shot {
+        padding-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "img1 img2"
+        "img3 img4"
+        ;
+    }
+    #shot img:nth-child(1) {
+        grid-area: img1;
+    }
+
+    #shot img:nth-child(2) {
+        grid-area: img2;
+    }
+
+    #shot img:nth-child(3) {
+        grid-area: img3;
+    }
+
+    #shot img:nth-child(4) {
+        grid-area: img4;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        padding-top: 0;
+    }
+    
+    .paragraph {
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1000px){
+    #shot {
+        padding-bottom: 2em;
     }
 }
