@@ -261,6 +261,7 @@ footer {
     
     #shot {
         padding-right: 0;
+        padding-bottom: 2em;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "img1 img2"
@@ -294,11 +295,5 @@ footer {
     
     .paragraph {
         gap: 30px;
-    }
-}
-
-@media (min-width: 1000px){
-    #shot {
-        padding-bottom: 2em;
     }
 }
